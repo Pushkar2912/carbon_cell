@@ -29,7 +29,7 @@ const Population = () => {
     }
    
     return (
-        <div className='flex flex-col gap-6'>
+        <div className='flex flex-col gap-6 w-[600px]'>
             <div className='text-white text-xl'>
                 Population
             </div>
