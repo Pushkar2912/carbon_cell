@@ -13,6 +13,7 @@ import { IoSearch } from "react-icons/io5";
 import { FaFireFlameCurved } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { PATHS } from '../../utils/paths';
+import { RxAvatar } from "react-icons/rx";
 
 const Sidebar = () => {
     const [showHam, setShowHam] = useState(false)
@@ -21,10 +22,10 @@ const Sidebar = () => {
         setShowHam(!showHam)
     }
     return (
-        <div className={`bg-gray-900 flex flex-col h-full p-3 justify-between`}>
+        <div className={`bg-gray-900 hidden md:flex flex-col min-h-screen p-3 justify-between`}>
             {showHam ? (
                 <>
-                    <div className='flex flex-col gap-8'>
+                    <div className='flex flex-col gap-8 h-full'>
                         <div className='mt-6 flex flex-col gap-6'>
                             <div className='text-green-400 flex items-center justify-between'>
                                 <div className='flex items-center'>
@@ -38,7 +39,7 @@ const Sidebar = () => {
                             </div>
                             <div className='flex items-center bg-gray-800 p-2 rounded-md cursor-pointer gap-2'>
                                 <IoSearch className='text-white' size={25} />
-                                <input className=' bg-gray-800' type="text" placeholder='Search' />
+                                <input className=' bg-gray-800 outline-none cursor cursor-pointer text-white' type="text" placeholder='Search' />
                             </div>
                         </div>
                         <div className='flex flex-col gap-4'>
@@ -50,10 +51,21 @@ const Sidebar = () => {
                     <Element title={"Wallet"} icon={<CiWallet />} color={"text-white"} /> */}
                         </div>
                     </div>
-                    <div className='flex flex-col gap-4'>
-                        <Element title={"Notification"} icon={<MdNotificationsNone />} color={"text-gray-500"} />
-                        <Element title={"Support"} icon={<AiOutlineQuestionCircle />} color={"text-gray-500"} />
-                        <Element title={"Settings"} icon={<IoSettingsOutline />} color={"text-gray-500"} />
+                    <div className='flex flex-col gap-8' >
+                        <div className='flex flex-col gap-4'>
+                            <Element title={"Notification"} icon={<MdNotificationsNone />} color={"text-gray-500"} path={PATHS.NOTIFICATION} />
+                            <Element title={"Support"} icon={<AiOutlineQuestionCircle />} color={"text-gray-500"} path={PATHS.SUPPORT} />
+                            <Element title={"Settings"} icon={<IoSettingsOutline />} color={"text-gray-500"} path={PATHS.SETTINGS} />
+                        </div>
+                        <div className='mb-4 bg-gray-800 p-3 rounded-md'>
+                            <div className='flex gap-2 items-center'>
+                                    <RxAvatar className='text-white' size={35} />
+                                <div>
+                                    <p className='text-gray-100'>Brooklyn Simmons</p>
+                                    <p className='text-gray-500 text-sm'>brooklyn@simmons.com</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </>
             ) : (

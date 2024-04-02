@@ -33,7 +33,7 @@ const Population = () => {
             <div className='text-white text-xl'>
                 Population
             </div>
-            <Line className='bg-gray-900 rounded-md w-full' data={populationChartData} />
+            <Line className='bg-gray-900 p-5 rounded-md w-full' data={populationChartData} />
         </div>
     )
 }

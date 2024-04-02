@@ -2,14 +2,14 @@ import React from 'react'
 
 const Card = ({ name, code, rate, symbol, icon }) => {
     return (
-        <div className='bg-gray-900 p-3 h-[150px] w-[300px] rounded-md flex flex-col gap-8'>
+        <div className='bg-gray-900 p-5 rounded-md flex flex-col gap-8' title={name}>
             <div className=''>
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-2 truncate'>
                     <div className='text-white bg-blue-500 p-2 rounded-[25px]'>
                         {icon}
                     </div>
-                    <div className='flex flex-col'>
-                        <div className='text-white'>
+                    <div className='flex flex-col truncate'>
+                        <div className='text-white truncate'>
                             {name}
                         </div>
                         <div className='text-gray-400 text-sm'>

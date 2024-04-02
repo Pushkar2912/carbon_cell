@@ -21,11 +21,14 @@ const Crypto = () => {
    
 
   return (
-    <div className='flex flex-col gap-6 lg:w-[100vw]'>
+    <div className='flex flex-col gap-6 md:mb-0 mb-16'>
         <div className='text-white text-xl'>
             Bitcoin
         </div>
-        <div className='flex gap-4'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-4'>
+          <Card name={crypto?.EUR?.description} code={crypto?.EUR?.code} rate={crypto?.EUR?.rate} symbol={crypto?.EUR?.symbol} icon={<FaEuroSign />} />
+          <Card name={crypto?.USD?.description} code={crypto?.USD?.code} rate={crypto?.USD?.rate} symbol={crypto?.USD?.symbol} icon={<IoLogoUsd />} />
+          <Card name={crypto?.GBP?.description} code={crypto?.GBP?.code} rate={crypto?.GBP?.rate} symbol={crypto?.GBP?.symbol} icon={<PiCurrencyGbpBold />} />
           <Card name={crypto?.EUR?.description} code={crypto?.EUR?.code} rate={crypto?.EUR?.rate} symbol={crypto?.EUR?.symbol} icon={<FaEuroSign />} />
           <Card name={crypto?.USD?.description} code={crypto?.USD?.code} rate={crypto?.USD?.rate} symbol={crypto?.USD?.symbol} icon={<IoLogoUsd />} />
           <Card name={crypto?.GBP?.description} code={crypto?.GBP?.code} rate={crypto?.GBP?.rate} symbol={crypto?.GBP?.symbol} icon={<PiCurrencyGbpBold />} />
