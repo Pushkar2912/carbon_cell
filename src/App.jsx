@@ -8,7 +8,7 @@ import Assets from './pages/Assets'
 
 const App = () => {
   return (
-    <div className='app-container bg-black h-screen flex'>
+    <div className='app-container bg-black min-h-screen'>
       <Sidebar />
       <Routes>
           <Route path={PATHS.HOME} element={<Home />} />

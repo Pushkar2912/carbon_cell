@@ -21,7 +21,7 @@ const Crypto = () => {
    
 
   return (
-    <div className='flex flex-col gap-6 w-[100vw]'>
+    <div className='flex flex-col gap-6 lg:w-[100vw]'>
         <div className='text-white text-xl'>
             Bitcoin
         </div>

@@ -29,11 +29,11 @@ const Population = () => {
     }
    
     return (
-        <div className='flex flex-col gap-6 w-[600px]'>
+        <div className='flex flex-col gap-6 lg:w-full md:w-[300px]'>
             <div className='text-white text-xl'>
                 Population
             </div>
-            <Line className='bg-gray-900 rounded-md' data={populationChartData} />
+            <Line className='bg-gray-900 rounded-md w-full' data={populationChartData} />
         </div>
     )
 }
